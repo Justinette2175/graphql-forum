@@ -1,0 +1,11 @@
+{
+  "name": "graphql-forum",
+  "version": "1.0.0",
+  "description": "A graph ql-based application consisting in multiple forums that users can join and post messages in.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justine Gagnepain",
+  "license": "ISC"
+}
