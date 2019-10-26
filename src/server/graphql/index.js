@@ -22,9 +22,14 @@ import {
   resolvers as QueryResolvers
 } from './query';
 
+import {
+  typeDef as Mutation,
+  resolvers as MutationResolvers
+} from './mutation';
+
 const schema = makeExecutableSchema({
-  typeDefs: [ Query, User, Forum, Message ],
-  resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers),
+  typeDefs: [ Query, User, Forum, Message, Mutation ],
+  resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers, MutationResolvers)
 });
 
 module.exports = schema

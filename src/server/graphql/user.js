@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-express';
 
-import UsersManager from '../dataUtils/UsersManager';
+import { UsersManager } from '../dataManagers';
 
 const typeDef = gql`
   type User {

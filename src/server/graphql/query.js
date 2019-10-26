@@ -1,13 +1,13 @@
 import { gql } from 'apollo-server-express';
 
-import ForumsManager from '../dataUtils/ForumsManager';
-import UsersManager from '../dataUtils/UsersManager';
+import { ForumsManager, UsersManager } from '../dataManagers';
 
 const typeDef =  gql`
   type Query {
     forums: [Forum]
     forum(id: String!): Forum
     user(id: String!): User
+    users: [User]
   }
 `;
 
@@ -20,6 +20,7 @@ const resolvers = {
     user: (_, { id }) => {
       return UsersManager.getUser({ userId: id });
     },
+    users: () => UsersManager.getUsers(),
   },
 };
 

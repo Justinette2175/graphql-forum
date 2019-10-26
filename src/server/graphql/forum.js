@@ -1,6 +1,6 @@
 import { gql } from 'apollo-server-express';
 
-import ForumsManager from '../dataUtils/ForumsManager';
+import { ForumsManager } from '../dataManagers';
 
 const typeDef = gql`
   type Forum {
