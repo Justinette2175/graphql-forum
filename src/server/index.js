@@ -3,31 +3,9 @@ import { ApolloServer, gql } from 'apollo-server-express';
 
 import { PORT } from '../../config.json';
 
-const typeDefs = gql`
-  type User {
-    userName: String
-    avatar: String
-    id: ID!
-  }
-  type Query {
-    user(id: String!): User
-  }
-`;
+import { schema } from './graphql/schema';
 
-const resolvers = {
-  Query: {
-    user: (parent, { id }) => {
-      return {
-        userName: 'John', 
-        avatar: 'https://api.adorable.io/avatars/70/john@adorable.io.png',
-        id: '1',
-      }
-    },
-  },
-};
-
-
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ schema });
 
 const app = express();
 server.applyMiddleware({ app });
