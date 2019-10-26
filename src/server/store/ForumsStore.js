@@ -19,6 +19,14 @@ class ForumsStore {
     return forum;
   }
 
+  getForumMembers({ forumId }) {
+    return this.getForum({ forumId }).members || [];
+  }
+
+  getForumMessages({ forumId }) {
+    return this.getForum({ forumId }).messages || [];
+  }
+
   _getIndexOfForum({ forumId }) {
     const indexOfForum = this._store.findIndex((f) => f.id === forumId);
     if (indexOfForum < 0) {
@@ -49,6 +57,10 @@ class ForumsStore {
     this._store.push(newForum);
     return newForum;
   };
+
+  isUserAForumMember({ userId, forumId }) {
+    return this.getForum({ forumId }).members.indexOf(userId) > -1;
+  }
 }
 
 const ForumsStoreInstance = new ForumsStore();

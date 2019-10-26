@@ -1,4 +1,5 @@
 import uuid from 'uuidv4';
+import { UserInputError } from 'apollo-server';
 
 import { ForumsStore, MessagesStore } from '../store';
 
@@ -8,6 +9,10 @@ class MessagesManager {
   }
 
   createMessage({ text, forumId, userId }) {
+    const isAllowed = ForumsStore.isUserAForumMember({ userId, forumId });
+    if (!isAllowed) {
+      throw new UserInputError('This user is not in this forum. They cannot post a message.');
+    }
     const messageId = uuid();
     const timestamp = Date.now();
     const newMessage = {
