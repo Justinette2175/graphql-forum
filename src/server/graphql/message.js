@@ -9,6 +9,15 @@ const typeDef = gql`
   }
 `;
 
+const resolvers = {
+  Message: {
+    writtenBy(message) {
+      return getUser({ id: message.writtenBy });
+    },
+  },
+}
+
 module.exports = {
   typeDef,
+  resolvers,
 }

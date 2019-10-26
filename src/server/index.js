@@ -3,7 +3,7 @@ import { ApolloServer, gql } from 'apollo-server-express';
 
 import { PORT } from '../../config.json';
 
-import { schema } from './graphql/schema';
+import { schema } from './graphql';
 
 const server = new ApolloServer({ schema });
 

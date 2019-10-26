@@ -9,6 +9,18 @@ const typeDef = gql`
   }
 `;
 
+const resolvers = {
+  Forum: {
+    members(forum) {
+      return []
+    },
+    messages(forum) {
+      return []
+    },
+  },
+}
+
 module.exports = {
   typeDef,
+  resolvers,
 }

@@ -9,6 +9,15 @@ const typeDef = gql`
   }
 `;
 
+const resolvers = {
+  User: {
+    forums(user) {
+      return getUserForums({ id: user.id });
+    },
+  },
+}
+
 module.exports = {
   typeDef,
+  resolvers,
 }
