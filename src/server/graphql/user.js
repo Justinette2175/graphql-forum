@@ -1,5 +1,7 @@
 import { gql } from 'apollo-server-express';
 
+import UsersManager from '../dataUtils/UsersManager';
+
 const typeDef = gql`
   type User {
     userName: String
@@ -12,7 +14,7 @@ const typeDef = gql`
 const resolvers = {
   User: {
     forums(user) {
-      return getUserForums({ id: user.id });
+      return UsersManager.getUserForums({ userId: user.id });
     },
   },
 }

@@ -1,5 +1,7 @@
 import { gql } from 'apollo-server-express';
 
+import UsersManager from '../dataUtils/UsersManager';
+
 const typeDef = gql`
   type Message {
     writtenBy: User!
@@ -12,7 +14,7 @@ const typeDef = gql`
 const resolvers = {
   Message: {
     writtenBy(message) {
-      return getUser({ id: message.writtenBy });
+      return UsersManager.getUser({ userId: message.writtenBy });
     },
   },
 }

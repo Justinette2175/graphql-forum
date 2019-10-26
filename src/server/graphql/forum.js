@@ -1,5 +1,7 @@
 import { gql } from 'apollo-server-express';
 
+import ForumsManager from '../dataUtils/ForumsManager';
+
 const typeDef = gql`
   type Forum {
     messages: [Message]
@@ -12,10 +14,10 @@ const typeDef = gql`
 const resolvers = {
   Forum: {
     members(forum) {
-      return []
+      return ForumsManager.getMembersInForum({ forumId: forum.id });
     },
     messages(forum) {
-      return []
+      return ForumsManager.getMessagesInForum({ forumId: forum.id });
     },
   },
 }

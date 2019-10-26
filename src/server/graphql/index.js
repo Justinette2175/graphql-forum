@@ -27,4 +27,4 @@ const schema = makeExecutableSchema({
   resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers),
 });
 
-module.exports = { schema }
+module.exports = schema
