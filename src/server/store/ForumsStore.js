@@ -1,4 +1,5 @@
 import ForumsSeed from '../seed/forums.json';
+import ErrorHandler from '../utils/ErrorHandler';
 
 import { UserInputError } from 'apollo-server';
 
@@ -14,7 +15,7 @@ class ForumsStore {
   getForum({ forumId }) {
     const forum = this._store.find((f) => f.id === forumId);
     if (!forum) {
-      throw new UserInputError('This forum does not exist!');
+      ErrorHandler.throwUserInputError('This forum does not exist!');
     }
     return forum;
   }
@@ -30,7 +31,7 @@ class ForumsStore {
   _getIndexOfForum({ forumId }) {
     const indexOfForum = this._store.findIndex((f) => f.id === forumId);
     if (indexOfForum < 0) {
-      throw new UserInputError('This forum does not exist!');
+      ErrorHandler.throwUserInputError('This forum does not exist!');
     }
     return indexOfForum;
   }
@@ -41,7 +42,7 @@ class ForumsStore {
       this._store[indexOfForum].members.push(userId);
       return this._store[indexOfForum];
     }
-    throw new UserInputError('This user is already in the forum.');
+    ErrorHandler.throwUserInputError('This user is already in the forum.');
   }
 
   addMessageToForumMessages({ forumId, messageId }) {
@@ -50,7 +51,7 @@ class ForumsStore {
       this._store[indexOfForum].messages.push(messageId);
       return this._store[indexOfForum];
     }
-    throw new UserInputError('This message is already in the forum');
+    ErrorHandler.throwUserInputError('This message is already in the forum');
   }
 
   createForum(newForum) {
