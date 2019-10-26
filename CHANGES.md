@@ -1,3 +1,4 @@
+```
 type User {
   userName: String!
   avatar: String!
@@ -52,3 +53,4 @@ type Subscription {
   newJoinForumRequest(requestId: String!): JoinForumRequest
   newJoinForumStatus(requestId: String!): Forum
 }
+```
