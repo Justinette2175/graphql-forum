@@ -1,7 +1,6 @@
 import ForumsSeed from '../seed/forums.json';
 
 import { UserInputError } from 'apollo-server';
-import { isNumber } from 'util';
 
 class ForumsStore {
   constructor() {
