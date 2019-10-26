@@ -1,10 +1,13 @@
-import { ApolloServer, gql} from 'apollo-server';
+import express from 'express';
+import { ApolloServer, gql } from 'apollo-server-express';
+
+import { PORT } from '../../config.json';
 
 const typeDefs = gql`
   type User {
     userName: String
     avatar: String
-    id: String!
+    id: ID!
   }
   type Query {
     user(id: String!): User
@@ -24,12 +27,12 @@ const resolvers = {
 };
 
 
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
+const server = new ApolloServer({ typeDefs, resolvers });
+
+const app = express();
+server.applyMiddleware({ app });
 
 // The `listen` method launches a web server.
-server.listen().then(({ url }) => {
-  console.log(`Server listening at ${url}`);
+app.listen({ port: PORT }, () => {
+  console.log(`Server ready at http://localhost:4000${server.graphqlPath}`)
 });
