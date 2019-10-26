@@ -17,21 +17,14 @@ import {
   resolvers as MessageResolvers
 } from './message';
 
-const Query =  gql`
-  type Query {
-    forums: [Forum]
-    forum(id: String!): Forum
-    user(id: String!): User
-  }
-`;
-
-const resolvers = {
-  Query: { },
-};
+import {
+  typeDef as Query,
+  resolvers as QueryResolvers
+} from './query';
 
 const schema = makeExecutableSchema({
   typeDefs: [ Query, User, Forum, Message ],
-  resolvers: merge(resolvers, UserResolvers, ForumResolvers, MessageResolvers),
+  resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers),
 });
 
 module.exports = { schema }
