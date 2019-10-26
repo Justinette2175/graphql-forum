@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Forum on bees, bzzzzz", 
+    "id": "dca7d063c04147cd96916e7d2a706691",
+    "messages": [
+      "c1387a3b25514a46901dc64042279f43", 
+      "a9e782d62772466ea51be89d26431a7a", 
+      "c1bbd5cf83c34935b858045c87f3f61c",
+      "173aefb4c8174462afade999331ac59b",
+      "f24aadd248ab46fcb860749d13eca484", 
+      "444865a28cb0483aa762659fd7b67b8d"
+    ], 
+    "members": [
+      "d263c09e8061469eb8256800805e89ea",
+      "bb24d09a55184bc39c532b7ff2fe096a"
+    ]
+  },
+  {
+    "name": "Another forum please!", 
+    "id": "2d36c85dbef345988f7ad91d09ef5eb4",
+    "messages": [
+      "bc30cfe7f94a4b248effdef8a63cc9c1", 
+      "ba564021316d4e0689e5b53e1cfd134f"
+    ], 
+    "members": [
+      "2f36acf625c1404d9623ead58e3ce51b",
+      "bb24d09a55184bc39c532b7ff2fe096a"
+    ]
+  }
+]

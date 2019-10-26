@@ -1,0 +1,50 @@
+[
+  {
+    "id": "c1387a3b25514a46901dc64042279f43",
+    "text": "some text",
+    "timestamp": 1571907600, 
+    "writtenBy": "d263c09e8061469eb8256800805e89ea"
+  },
+  {
+    "id": "a9e782d62772466ea51be89d26431a7a", 
+    "text": "some text",
+    "timestamp": 1571907900,
+    "writtenBy": "bb24d09a55184bc39c532b7ff2fe096a"
+  }, 
+  {
+    "id": "c1bbd5cf83c34935b858045c87f3f61c",
+    "text": "some text", 
+    "timestamp": 1571907300,
+    "writtenBy": "d263c09e8061469eb8256800805e89ea"
+  }, 
+  {
+    "id": "173aefb4c8174462afade999331ac59b",
+    "text": "some text", 
+    "timestamp": 1571907100,
+    "writtenBy": "bb24d09a55184bc39c532b7ff2fe096a"
+  },
+  {    
+    "id": "f24aadd248ab46fcb860749d13eca484", 
+    "text": "some text", 
+    "timestamp": 1571908000, 
+    "writtenBy": "bb24d09a55184bc39c532b7ff2fe096a"
+  }, 
+  {
+    "id": "444865a28cb0483aa762659fd7b67b8d", 
+    "text": "some text", 
+    "timestamp": 1571907650, 
+    "writtenBy": "d263c09e8061469eb8256800805e89ea"
+  },
+  {
+    "id": "bc30cfe7f94a4b248effdef8a63cc9c1", 
+    "text": "some text", 
+    "timestamp": 1571907230, 
+    "writtenBy": "2f36acf625c1404d9623ead58e3ce51b"
+  },
+  {
+    "id": "ba564021316d4e0689e5b53e1cfd134f", 
+    "text": "some text", 
+    "timestamp": 1571907130,
+    "writtenBy": "bb24d09a55184bc39c532b7ff2fe096a"
+  }
+]
