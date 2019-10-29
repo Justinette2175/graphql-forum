@@ -1,6 +1,6 @@
-import { gql } from 'apollo-server-express';
 import { makeExecutableSchema } from 'graphql-tools';
 import merge from 'lodash.merge';
+import context from './context';
 
 import {
   typeDef as User, 
@@ -32,4 +32,7 @@ const schema = makeExecutableSchema({
   resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers, MutationResolvers)
 });
 
-module.exports = schema
+module.exports = {
+  schema, 
+  context
+}

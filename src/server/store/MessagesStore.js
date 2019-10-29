@@ -1,4 +1,4 @@
-import MessagesSeed from '../seed/messages.json';
+import { messages as MessagesSeed } from '../seed';
 
 class MessagesStore {
   constructor() {

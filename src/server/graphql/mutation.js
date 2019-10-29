@@ -1,7 +1,7 @@
 import { gql } from 'apollo-server-express';
 
 import { ForumsManager, MessagesManager } from '../dataManagers';
-import ErrorHandler from '../utils/ErrorHandler';
+import { ErrorHandler } from '../utils';
 
 const typeDef =  gql`
   type Mutation {

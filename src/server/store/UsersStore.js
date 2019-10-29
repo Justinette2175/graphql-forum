@@ -1,4 +1,4 @@
-import UsersSeed from '../seed/users.json';
+import { users as UsersSeed } from '../seed';
 
 class UsersStore {
   constructor() {

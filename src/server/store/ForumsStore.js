@@ -1,7 +1,6 @@
-import ForumsSeed from '../seed/forums.json';
-import ErrorHandler from '../utils/ErrorHandler';
+import { forums as ForumsSeed } from '../seed';
+import { ErrorHandler } from '../utils';
 
-import { UserInputError } from 'apollo-server';
 
 class ForumsStore {
   constructor() {
