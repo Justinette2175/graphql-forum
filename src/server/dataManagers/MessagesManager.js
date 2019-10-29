@@ -1,5 +1,4 @@
 import uuid from 'uuidv4';
-import { UserInputError } from 'apollo-server';
 
 import { ForumsStore, MessagesStore } from '../store';
 import { ErrorHandler } from '../utils';
