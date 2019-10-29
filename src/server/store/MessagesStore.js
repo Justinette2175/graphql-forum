@@ -1,5 +1,4 @@
 import { messages as MessagesSeed } from '../seed';
-
 class MessagesStore {
   constructor() {
     this._store = MessagesSeed;

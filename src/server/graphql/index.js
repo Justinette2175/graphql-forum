@@ -27,8 +27,12 @@ import {
   resolvers as MutationResolvers
 } from './mutation';
 
+import {
+  typeDef as Enum,
+} from './enum';
+
 const schema = makeExecutableSchema({
-  typeDefs: [ Query, User, Forum, Message, Mutation ],
+  typeDefs: [ Query, Enum, User, Forum, Message, Mutation ],
   resolvers: merge(QueryResolvers, UserResolvers, ForumResolvers, MessageResolvers, MutationResolvers)
 });
 
