@@ -1,5 +1,3 @@
-import { UserInputError } from 'apollo-server';
-
 import { ForumsStore, UsersStore } from '../store';
 
 class UsersManager {
